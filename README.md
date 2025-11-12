@@ -8,6 +8,34 @@ See [our official documentation](https://docs.github.com/copilot/concepts/agents
 
 ![Image of the splash screen for the Copilot CLI](https://github.com/user-attachments/assets/51ac25d2-c074-467a-9c88-38a8d76690e3)
 
+---
+
+## 🧠 OpenCog Kernel Implementation
+
+**NEW:** This repository now includes a C/C++ implementation of OpenCog cognitive primitives, designed for integration with cogpilot-cli. This provides:
+
+- **AtomSpace** - Hypergraph-based knowledge representation
+- **ECAN** - Economic attention allocation and scheduling
+- **PLN** - Probabilistic logic networks for inference
+- **Cognitive Loop** - Multi-stage bootstrap and event-driven processing
+
+Built for future GGML/llama.cpp tensor operation integration. See [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md) for details.
+
+**Quick Start:**
+```bash
+mkdir build && cd build
+cmake .. && make
+./examples/basic_usage
+```
+
+**Documentation:**
+- [Implementation Guide](docs/IMPLEMENTATION.md)
+- [Build Instructions](docs/BUILD.md)
+- [API Reference](docs/KERNEL_FUNCTION_MANIFEST.md)
+- [Status Report](docs/KERNEL_STATUS_REPORT.md)
+
+---
+
 ## 🚀 Introduction and Overview
 
 We're bringing the power of GitHub Copilot coding agent directly to your terminal. With GitHub Copilot CLI, you can work locally and synchronously with an AI agent that understands your code and GitHub context.
