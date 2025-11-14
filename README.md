@@ -21,11 +21,47 @@ See [our official documentation](https://docs.github.com/copilot/concepts/agents
 
 Built for future GGML/llama.cpp tensor operation integration. See [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md) for details.
 
-**Quick Start:**
+**Quick Start with CLI:**
 ```bash
+# Build the project
 mkdir build && cd build
 cmake .. && make
+
+# Run the interactive CLI
+./cogpilot-cli
+
+# Or run example programs
 ./examples/basic_usage
+```
+
+**CLI Example Session:**
+```bash
+$ ./cogpilot-cli
+cogpilot> init 64
+✓ Cognitive kernel initialized with 64MB memory
+
+cogpilot> boot 1
+✓ Stage 1 complete: Hypergraph filesystem
+
+cogpilot> atom create concept human
+✓ Created concept atom 'human' (handle: 1)
+
+cogpilot> atom create concept mortal
+✓ Created concept atom 'mortal' (handle: 2)
+
+cogpilot> link create inheritance 1 2
+✓ Created inheritance link: 1 -> 2 (handle: 3)
+
+cogpilot> attention set 1 100.0 50.0 10.0
+✓ Set attention for atom 1: STI=100.0, LTI=50.0, VLTI=10.0
+
+cogpilot> infer 1
+Inference result for atom 1:
+  Strength:   0.500
+  Confidence: 0.000
+
+cogpilot> exit
+Goodbye!
 ```
 
 **Documentation:**
@@ -33,6 +69,7 @@ cmake .. && make
 - [Build Instructions](docs/BUILD.md)
 - [API Reference](docs/KERNEL_FUNCTION_MANIFEST.md)
 - [Status Report](docs/KERNEL_STATUS_REPORT.md)
+- [CLI Usage Guide](docs/CLI_USAGE.md)
 
 ---
 

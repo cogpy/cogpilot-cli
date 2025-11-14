@@ -34,10 +34,15 @@ set_target_properties(cogkern PROPERTIES
     PUBLIC_HEADER include/cogkern.h
 )
 
+# CLI executable
+add_executable(cogpilot-cli src/cli.c)
+target_link_libraries(cogpilot-cli cogkern)
+
 # Installation
-install(TARGETS cogkern
+install(TARGETS cogkern cogpilot-cli
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
     PUBLIC_HEADER DESTINATION include
 )
 

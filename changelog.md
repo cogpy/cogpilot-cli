@@ -1,3 +1,38 @@
+## 0.1.0 - 2025-11-12
+
+### Added - OpenCog Kernel CLI Implementation
+
+- **New `cogpilot-cli` executable**: Command-line interface for OpenCog cognitive functions
+  - Interactive shell mode for REPL-style exploration
+  - Command-line mode for single commands and scripting
+  - State management within sessions
+  
+- **Full API Coverage**:
+  - Core operations: `init`, `shutdown`, `boot`
+  - AtomSpace: `atom create`, `atom list`, `link create`
+  - ECAN attention: `attention set`, `attention get`, `attention spread`
+  - PLN inference: `infer`
+  - Cognitive Loop: `loop start`, `loop tick`, `loop stop`
+
+- **Documentation**:
+  - Comprehensive CLI usage guide (`docs/CLI_USAGE.md`)
+  - Updated README with CLI examples
+  - Demo script showcasing all features (`demo.sh`)
+  - Test scripts for validation
+
+- **Examples**:
+  - Interactive mode: Run `cogpilot-cli` for REPL shell
+  - Command mode: Run `cogpilot-cli <command> [args]`
+  - Scriptable: Pipe commands via stdin
+
+### Technical Details
+- C99 implementation with full error handling
+- Zero security vulnerabilities (CodeQL verified)
+- Compatible with existing OpenCog kernel library
+- Supports both automated and interactive workflows
+
+---
+
 ## 0.0.351 - 2025-10-24
 
 - Improved our path detection heuristic to avoid various annoying, unnecessary permissions requests:
